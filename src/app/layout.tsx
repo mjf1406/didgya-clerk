@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "~/components/theme-provider";
-
+import { Analytics } from "@vercel/analytics/react";
 import { TRPCReactProvider } from "~/trpc/react";
 
 const poppins = Poppins({
@@ -34,6 +34,7 @@ export default function RootLayout({
             >
               {children}
             </ThemeProvider>
+            <Analytics />
           </TRPCReactProvider>
         </body>
       </html>
