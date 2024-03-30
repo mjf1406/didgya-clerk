@@ -18,44 +18,46 @@ import {
 
 export default function TopNav() {
   return (
-    <div className="border-accent space-between sticky top-0 flex h-14 w-full items-center justify-between border-b px-4 md:px-6">
-      <Link
-        className="flex items-center justify-center gap-2 font-semibold"
-        href="/"
-      >
-        <Logo fill="hsl(var(--primary))" size="30" />
-        <span className="text-2xl">DidgYa</span>
-      </Link>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="#features" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Features
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="#pricing" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Pricing
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="#faq" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                FAQ
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div className="flex items-center gap-2">
-        <Button asChild>
-          <Link href="/sign-in">Sign In</Link>
-        </Button>
-        <ThemeToggle />
+    <div className="border-accent sticky top-0 m-auto flex w-full items-center justify-between border-b">
+      <div className=" space-between  m-auto flex h-14 w-full max-w-4xl items-center justify-between px-4 md:px-6">
+        <Link
+          className="flex items-center justify-center gap-2 font-semibold"
+          href="/"
+        >
+          <Logo fill="hsl(var(--primary))" size="30" />
+          <span className="text-2xl">DidgYa</span>
+        </Link>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Link href="#features" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Features
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="#pricing" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Pricing
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="#faq" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  FAQ
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <div className="flex items-center gap-2">
+          <Button asChild>
+            <Link href="/sign-in">Sign In</Link>
+          </Button>
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

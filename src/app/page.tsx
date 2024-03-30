@@ -30,9 +30,10 @@ export default async function Home() {
             </Button>
             <Button
               variant="secondary"
-              className="bg-secondary/30 text-text/70 px-8"
+              className="bg-secondary/30 text-text/70 hover:bg-secondary/40 px-8"
+              asChild
             >
-              Learn more
+              <Link href={"#features"}>Learn more</Link>
             </Button>
           </div>
         </div>
