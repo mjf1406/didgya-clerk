@@ -4,51 +4,78 @@
 
 @layer base {
   :root {
-    --text: 70 40% 6%;
-    --background: 72 56% 98%;
-    --foreground: 70 40% 6%;
-    --card: 72 56% 98%;
-    --card-foreground: 70 40% 6%;
-    --popover: 72 56% 98%;
-    --popover-foreground: 70 40% 6%;
-    --primary: 72 69% 52%;
-    --primary-foreground: 70 40% 6%;
-    --secondary: 72 82% 73%;
-    --secondary-foreground: 70 40% 6%;
-    --muted: 72 57% 20%;
-    --muted-foreground: 70 40% 70%;
-    --accent: 72 97% 65%;
-    --accent-foreground: 70 40% 6%;
+    --background: 144 50% 96%;
+    --foreground: 147 43% 9%;
+    --card: 144 50% 96%;
+    --card-foreground: 147 43% 9%;
+    --popover: 144 50% 96%;
+    --popover-foreground: 147 43% 9%;
+    --primary: 148 56% 30%;
+    --primary-foreground: 144 50% 96%;
+    --secondary: 148 61% 68%;
+    --secondary-foreground: 147 43% 9%;
+    --muted: 144 51% 20%;
+    --muted-foreground: 147 42% 70%;
+    --accent: 148 67% 50%;
+    --accent-foreground: 147 43% 9%;
     --destructive: 0 85% 60%;
-    --destructive-foreground: 70 40% 6%;
-    --border: 72 57% 20%;
-    --input: 72 57% 20%;
-    --ring: 72 97% 40%;
+    --destructive-foreground: 147 43% 9%;
+    --border: 144 51% 20%;
+    --input: 144 51% 20%;
+    --ring: 148 67% 40%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --text: 70 40% 94%;
-    --background: 70 60% 2%;
-    --foreground: 70 40% 94%;
-    --card: 70 60% 2%;
-    --card-foreground: 70 40% 94%;
-    --popover: 70 60% 2%;
-    --popover-foreground: 70 40% 94%;
-    --primary: 72 69% 48%;
-    --primary-foreground: 70 60% 2%;
-    --secondary: 72 82% 27%;
-    --secondary-foreground: 70 60% 2%;
-    --muted: 71 61% 80%;
-    --muted-foreground: 70 40% 94%;
-    --accent: 72 97% 35%;
-    --accent-foreground: 70 60% 2%;
+    --background: 147 47% 4%;
+    --foreground: 147 43% 91%;
+    --card: 147 47% 4%;
+    --card-foreground: 147 43% 91%;
+    --popover: 147 47% 4%;
+    --popover-foreground: 147 43% 91%;
+    --primary: 148 55% 70%;
+    --primary-foreground: 147 47% 4%;
+    --secondary: 148 61% 32%;
+    --secondary-foreground: 147 47% 4%;
+    --muted: 147 47% 80%;
+    --muted-foreground: 147 43% 91%;
+    --accent: 148 67% 50%;
+    --accent-foreground: 147 47% 4%;
     --destructive: 0 62% 30%;
-    --destructive-foreground: 71 41% 10%;
-    --border: 70 60% 60%;
-    --input: 71 61% 80%;
-    --ring: 72 97% 60%;
+    --destructive-foreground: 146 41% 10%;
+    --border: 147 47% 60%;
+    --input: 147 47% 80%;
+    --ring: 148 67% 60%;
   }
+}
+
+/* Clerk Modifiecations */
+
+.cl-formButtonPrimary {
+  @apply transform-none bg-primary text-xs text-background;
+}
+
+.cl-formButtonPrimary:hover,
+.cl-formButtonPrimary:focus,
+.cl-formButtonPrimary:active {
+  @apply bg-primary/90;
+}
+
+.cl-footerActionLink {
+  @apply text-primary underline;
+}
+.cl-footerActionLink:hover,
+.cl-footerActionLink:focus,
+.cl-footerActionLink:active {
+  @apply text-primary/80;
+}
+
+.cl-socialButtonsBlockButton {
+  @apply bg-primary/10 text-text;
+}
+
+.cl-internal-b3fm6y {
+  @apply bg-secondary text-text;
 }
 
 @layer base {

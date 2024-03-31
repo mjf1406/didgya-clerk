@@ -16,9 +16,16 @@ import {
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
 
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+  SignOutButton,
+} from "@clerk/clerk-react";
+
 export default function TopNav() {
   return (
-    <div className="border-accent sticky top-0 m-auto flex w-full items-center justify-between border-b">
+    <div className="sticky top-0 m-auto flex w-full items-center justify-between border-b border-accent">
       <div className=" space-between  m-auto flex h-14 w-full max-w-4xl items-center justify-between px-4 md:px-6">
         <Link
           className="flex items-center justify-center gap-2 font-semibold"
@@ -52,10 +59,22 @@ export default function TopNav() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="flex items-center gap-2">
-          <Button asChild>
-            <Link href="/sign-in">Sign In</Link>
-          </Button>
+        <div className="flex items-center gap-4">
+          <SignedIn>
+            <UserButton />
+            <Button
+              asChild
+              variant="secondary"
+              className="bg-secondary/30 text-text/70 hover:bg-secondary/40"
+            >
+              <SignOutButton />
+            </Button>
+          </SignedIn>
+          <SignedOut>
+            <Button asChild>
+              <Link href="/auth/sign-in">Sign in</Link>
+            </Button>
+          </SignedOut>
           <ThemeToggle />
         </div>
       </div>
@@ -73,13 +92,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
         </a>

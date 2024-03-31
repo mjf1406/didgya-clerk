@@ -4,10 +4,13 @@ Did you do it? Did you experience it? DidgYa is an app designed to simplify the 
 
 ## Change Log
 
-- To-do list
+- ## To-do list
+- to-do
+  - k
+- 2024/03/31
   - create custom sign in page
   - add redirect to /didgyas on sign in
-- 2024/3/30
+- 2024/03/30
   - initial commit
 
 ## Attributions
@@ -17,5 +20,5 @@ Did you do it? Did you experience it? DidgYa is an app designed to simplify the 
 - Auth by [Clerk](https://clerk.com/)
 - ORM by [Prisma](https://www.prisma.io/)
 - Type safety by [tRPC](https://trpc.io/)
-- Colors from [RealtimeColors](https://www.realtimecolors.com/?colors=131509-fcfdf7-b7d930-dcf382-dafc4f&fonts=Poppins-Poppins)
+- Colors from [RealtimeColors](https://www.realtimecolors.com/?colors=def2e7-050e09-89ddb0-1f824d-2bd579&fonts=Poppins-Poppins)
 - UI by [Shadcn/ui](https://ui.shadcn.com/)
